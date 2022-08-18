@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+        <script>
+            $(document).ready(function() {
+               
+   $("#forms").validate({
+      rules: {
+         firstname: 'required',
+         lastname: 'required',
+         u_email: {
+            required: true,
+            email: true,},
+            maxlength: 255,}
+   });
+   
+
+});
+        </script>
+    </head>
+<body>
+<h2>Validation of a form</h2>
+<form id="form" method="post" action="">
+First name:<br>
+<input type="text" name="firstname" placeholder="First name" value=" ">
+<br>
+Last name:<br>
+<input type="text" name="lastname" placeholder="last name" value=" ">
+<br>
+Email:<br>
+<input type="email" name="u_email" placeholder="Enter you mail id" value=" ">
+<br>
+contact:<br>
+<textarea rows="5" id="TxtContactMsg" placeholder="enter the contact msg here.." maxlength="200"></textarea><br/>
+
+<br><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
